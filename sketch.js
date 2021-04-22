@@ -67,7 +67,7 @@ class movingGirls{
   move(){
     //noise is to return a number from 0-1
     this.valx += 0.005;
-    this.valy += 0.010;
+    this.valy += 0.015;
     this.valz += 0.005;
     
     this.x = noise(this.valx)*width;
@@ -77,7 +77,7 @@ class movingGirls{
   
   display(){
     push();
-    translate(this.x - width*0.6, this.y - height*0.27, this.z - this.zRange/2);
+    translate(this.x - width*0.65, this.y - height*0.27, this.z - this.zRange/2);
     angleRotate += 0.1;
     rotateX(180);
     rotateY(angleRotate);
@@ -110,7 +110,7 @@ function flowerBG(){
 
 function flowerBG2(){
   push();
-  translate(-500, height*0.3, -100);
+  translate(-550, height*0.3, -100);
   angle1 += 0.2;
   rotateX(170);
   rotateY(-angle1);

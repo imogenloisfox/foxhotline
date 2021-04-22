@@ -49,7 +49,6 @@ function draw(){
     girls[i].move();
     girls[i].display();
   }
-  
 }
 
 class movingGirls{
@@ -138,7 +137,6 @@ function flowerBG3(){
   pop();
   
 }
-
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);

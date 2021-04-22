@@ -61,7 +61,7 @@ class movingGirls{
     this.valy = random(200);
     this.valz = random(100);
     this.size = random(0.05, 0.5);
-    this.c = color(random(100,181), random(150,255), random(100,208));
+    this.c = color(random(255));
   }
   
   move(){

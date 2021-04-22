@@ -13,7 +13,6 @@ let flower;
 
 let seed = 100000;
 
-
 function preload(){
   girl = loadModel ('girl.obj');
   flower = loadModel ('flower.obj');
@@ -50,7 +49,6 @@ function draw(){
     girls[i].move();
     girls[i].display();
   }
-  
 }
 
 class movingGirls{
@@ -139,7 +137,6 @@ function flowerBG3(){
   pop();
   
 }
-
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);

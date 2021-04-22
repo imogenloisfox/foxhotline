@@ -13,7 +13,6 @@ let flower;
 
 let seed = 100000;
 
-
 function preload(){
   girl = loadModel ('girl.obj');
   flower = loadModel ('flower.obj');

@@ -77,7 +77,7 @@ class movingGirls{
   
   display(){
     push();
-    translate(this.x - width*0.45, this.y - height*0.27, this.z - this.zRange/2);
+    translate(this.x - width*0.55, this.y - height*0.27, this.z - this.zRange/2);
     angleRotate += 0.1;
     rotateX(180);
     rotateY(angleRotate);
@@ -95,7 +95,7 @@ class movingGirls{
 
 function flowerBG(){
   push();
-  translate(250, height*0.3, 0);
+  translate(350, height*0.3, 0);
   angle1 += 0.2;
   rotateX(160);
   rotateY(angle1);
@@ -110,7 +110,7 @@ function flowerBG(){
 
 function flowerBG2(){
   push();
-  translate(-400, height*0.3, -100);
+  translate(-600, height*0.3, -100);
   angle1 += 0.2;
   rotateX(170);
   rotateY(-angle1);
@@ -125,7 +125,7 @@ function flowerBG2(){
 
 function flowerBG3(){
   push();
-  translate(50, height*0.4, -200);
+  translate(100, height*0.4, -200);
   angle1 += 0.2;
   rotateX(140);
   rotateY(-angle1);

@@ -61,7 +61,7 @@ class movingGirls{
     this.valy = random(200);
     this.valz = random(100);
     this.size = random(0.05, 0.5);
-    this.c = color(random(100,181), random(150,255), random(100,208));
+    this.c = color(random(255));
   }
   
   move(){
@@ -110,7 +110,7 @@ function flowerBG(){
 
 function flowerBG2(){
   push();
-  translate(-400, height*0.35, -100);
+  translate(-500, height*0.3, -100);
   angle1 += 0.2;
   rotateX(170);
   rotateY(-angle1);
@@ -125,7 +125,7 @@ function flowerBG2(){
 
 function flowerBG3(){
   push();
-  translate(0, height*0.5, -200);
+  translate(-50, height*0.4, -200);
   angle1 += 0.2;
   rotateX(140);
   rotateY(-angle1);

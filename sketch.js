@@ -1,134 +1,86 @@
-let movers = [];
-let attractor;
-
+let boxSize = 300;
+let angle = 0;
+let balls = [];
+let initial_z;
+let xRange;
 let colors = [];
+let ballNum = 30;
+let angleRotate = 0;
+let heart;
+let girl;
+let seed = 100000;
 
-let seed = 1000;
+function preload(){
+  girl = loadModel ('girl.obj');
+}
 
 function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight);
+  let canvas = createCanvas(windowWidth, windowHeight, WEBGL);
   canvas.parent('sketch-container');
   colorMode(HSB);
-  
-  //color
-  for(let i = 0; i < 9; i++) {
-    let newColor = color(random(360), random(100), random(100), 0.5);
-    colors.push(newColor);
-    //frameRate(3);
+  angleMode(DEGREES);
+   //balls
+   for(let i = 0; i < ballNum; i++){
+    balls.push(new movingBall());
   }
-
-  for (let i = 0; i < 50; i++) {
-    let x = random(width);
-    let y = random(height);
-    let m = random(50, 150);
-    movers[i] = new Mover(x, y, m);
-  }
-  attractor = new Attractor(width / 2, height / 2, 100);
- 
 }
 
 function draw(){
-  background(0, 0, 100, 0.4);
+  background(360, 0, 100);
+  // noFill();
+  // //noStroke();
+  // stroke(255, 140, 200);
+  // angle += 0.1;
+  // rotateY(angle);
+  // box(boxSize);
   
-   randomSeed(seed); //MAKES VARIATION STATIC!!!
-  
-  
-  for (let mover of movers) {
-    mover.update();
-    mover.show();
-    attractor.attract(mover);
+  randomSeed(seed);
+  for(let i = 0; i < ballNum; i++){
+    balls[i].move();
+    balls[i].display();
   }
-  if (mouseIsPressed) {
-    attractor.pos.x = mouseX;
-    attractor.pos.y = mouseY;
-  }
-  attractor.show();
+  
 }
 
-
-function flower(x,y){
+class movingBall{
+  constructor(){
+    this.x = random(width);
+    this.y = random(height);
+    this.zRange = height;
+    this.z = random(this.zRange);
+    this.valx = random(300);
+    this.valy = random(200);
+    this.valz = random(100);
+    this.size = random(0.05, 0.5);
+   this.c = color(random(360), random(100), random(100));
+  }
+  
+  move(){
+    //noise is to return a number from 0-1
+    this.valx += 0.005;
+    this.valy += 0.010;
+    this.valz += 0.005;
     
-    //flower
-  //flower petals
-  push();
-  translate(x,y);
-  scale(random(0.1, 0.9));
-  ellipse(0, -25, 50);
-  ellipse(0, 25, 50);
-  ellipse(-25, 0, 50);
-  ellipse(25, 0, 50);
-  pop();
- //flower middle
-  push();
-  translate(x,y);
-  scale(0.5);
-  fill(255);
-  ellipse(0,0,20);
-  pop();
+    this.x = noise(this.valx)*width;
+    this.y = noise(this.valy)*height;
+    this.z = noise(this.valz)*this.zRange;
   }
-
-
-class Mover {
-  constructor(x, y, m) {
-    this.pos = createVector(x, y);
-    this.vel = p5.Vector.random2D();
-    this.vel.mult(5);
-    this.acc = createVector(0, 0);
-    this.mass = m;
-    this.r = sqrt(this.mass) * 2;
-  }
-
-
-  applyForce(force) {
-    let f = p5.Vector.div(force, this.mass);
-    this.acc.add(f);
-  }
-
-  update() {
-    this.vel.add(this.acc);
-    this.pos.add(this.vel);
-    this.acc.set(0, 0);
-
-  }
-  show() {
-  stroke(random(colors));
-  fill(random(colors));
-  strokeWeight(random(20));
-    flower(this.pos.x, this.pos.y, this.r * 2);
+  
+  display(){
+    push();
+    translate(this.x - width*0.5, this.y - height*0.27, this.z - this.zRange/2);
+    angleRotate += 0.1;
+    rotateX(180);
+    rotateY(angleRotate);
+    //rotateZ(angleRotate);
+    noFill();
+    stroke(this.c);
+    strokeWeight(random(0.05, 0.5));
+    scale(this.size);
+    model(girl);
+    pop();
   }
 }
-
-
-class Attractor {
-  
-  constructor(x,y,m) {
-    this.pos = createVector(x,y);
-    this.mass = m;
-    this.r = sqrt(this.mass)*2;
-  }
-  
-  attract(mover) {
-    let force = p5.Vector.sub(this.pos, mover.pos);
-    let distanceSq = constrain(force.magSq(), 100, 1000);
-    let G = 5;
-    let strength = G * (this.mass * mover.mass) / distanceSq;
-    force.setMag(strength);
-    mover.applyForce(force);
-  }
-  
-  
-  show() {
-  stroke(random(colors));
-  fill(random(colors));
-  strokeWeight(random(20));
-    flower(this.pos.x, this.pos.y, this.r*2);    
-    
-
-
-  
-  }
-}
-
 
 
 function windowResized(){

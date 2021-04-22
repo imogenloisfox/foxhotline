@@ -77,7 +77,7 @@ class movingGirls{
   
   display(){
     push();
-    translate(this.x - width*0.5, this.y - height*0.27, this.z - this.zRange/2);
+    translate(this.x - width*0.6, this.y - height*0.27, this.z - this.zRange/2);
     angleRotate += 0.1;
     rotateX(180);
     rotateY(angleRotate);

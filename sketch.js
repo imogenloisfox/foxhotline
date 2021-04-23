@@ -37,7 +37,7 @@ function setup() {
 }
 
 function draw(){
-  background(0);
+  background(255);
   randomSeed(seed);
 
   let locX = mouseX - height / 2;
@@ -131,7 +131,7 @@ function flowerBG2(){
 
 function flowerBG3(){
   push();
-  translate(0, height*0.4, -200);
+  translate(0, height*0.4, -100);
   angle1 += 0.2;
   rotateX(150);
   rotateY(-angle1);

@@ -13,6 +13,8 @@ let flower;
 
 let seed = 100000;
 
+let listOfColors = [];
+
 function preload(){
   girl = loadModel ('girl.obj');
   flower = loadModel ('flower.obj');
@@ -23,6 +25,10 @@ function setup() {
   canvas.parent('sketch-container');
  
   angleMode(DEGREES);
+
+  //color
+  listOfColors = [color('#FF85F0'), color('#A9FFD2'), color('#FF8A22'), color('#D50000'), color('#14F4FF'), color('#F1FF14'), color('#9589FF'), color('#FF009E'), color('#076610')];
+  
 
  //girls
  for(let i = 0; i < girlNum; i++){
@@ -37,7 +43,7 @@ function draw(){
   let locX = mouseX - height / 2;
   let locY = mouseY - width / 2;
 
-  ambientLight(181, 255, 208);
+  ambientLight(240);
   directionalLight(10,10,10, 0.15, 0.15, 0);
   pointLight(255, 255, 255, locX, locY, 100);
   
@@ -61,7 +67,7 @@ class movingGirls{
     this.valy = random(200);
     this.valz = random(100);
     this.size = random(0.05, 0.5);
-    this.c = color(random(255));
+    this.c = (listOfColors[int(random(0, listOfColors.length))]);
   }
   
   move(){
@@ -77,7 +83,7 @@ class movingGirls{
   
   display(){
     push();
-    translate(this.x - width*0.55, this.y - height*0.27, this.z - this.zRange/2);
+    translate(this.x - width*0.45, this.y - height*0.27, this.z - this.zRange/2);
     angleRotate += 0.1;
     rotateX(180);
     rotateY(angleRotate);
@@ -102,7 +108,7 @@ function flowerBG(){
   scale(0.42);
   noStroke();
   //stroke(0);
-  specularMaterial(181, 255, 208);
+  specularMaterial(100);
   model(flower);
   pop();
   
@@ -110,14 +116,14 @@ function flowerBG(){
 
 function flowerBG2(){
   push();
-  translate(-600, height*0.3, -100);
+  translate(-400, height*0.3, -100);
   angle1 += 0.2;
-  rotateX(170);
+  rotateX(165);
   rotateY(-angle1);
   scale(0.47);
   noStroke();
   //stroke(0);
-  specularMaterial(181, 255, 208);
+  specularMaterial(150);
   model(flower);
   pop();
   
@@ -125,14 +131,14 @@ function flowerBG2(){
 
 function flowerBG3(){
   push();
-  translate(100, height*0.4, -200);
+  translate(0, height*0.4, -200);
   angle1 += 0.2;
-  rotateX(140);
+  rotateX(150);
   rotateY(-angle1);
   scale(0.43);
   noStroke();
   //stroke(0);
-  specularMaterial(181, 255, 208);
+  specularMaterial(200);
   model(flower);
   pop();
   

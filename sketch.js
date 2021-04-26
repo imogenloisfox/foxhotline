@@ -1,6 +1,6 @@
 //girls
 let girls = [];
-let girlNum = 30;
+let girlNum = 20;
 
 //angle
 let angle = 0;
@@ -27,7 +27,8 @@ function setup() {
   angleMode(DEGREES);
 
   //color
-  listOfColors = [color('#FF85F0'), color('#A9FFD2'), color('#FF8A22'), color('#D50000'), color('#14F4FF'), color('#F1FF14'), color('#9589FF'), color('#FF009E'), color('#076610')];
+   //colorMode(HSB);
+   listOfColors = [color('#b9e898'), color('#fe633c'), color('#c6f0f5'), color('#ff2e4c'), color('#14F4FF'), color('#26a7e1#'), color('#f58ed3'), color('#e9ec02'), color('#f6f6fb')];
   
 
  //girls
@@ -43,13 +44,28 @@ function draw(){
   let locX = mouseX - height / 2;
   let locY = mouseY - width / 2;
 
-  ambientLight(240);
-  directionalLight(10,10,10, 0.15, 0.15, 0);
-  pointLight(255, 255, 255, locX, locY, 100);
+  ambientLight(255, 0,0);
+  directionalLight(90,255,180, 0.15, 0.15, 0);
+  pointLight(255,103,151, locX, locY, 100);
+
+  push();
+  translate(-200, -200);
+  noStroke();
+  beginShape();
+  fill(255,0,0);
+  vertex(50,50);
+  fill(0,255,0);
+  vertex(300,50);
+  fill(0,255,255);
+  vertex(300,300);
+  fill(0,0,250);
+  vertex(50,300);
+  endShape(CLOSE);
+  pop();
   
-  flowerBG();
-  flowerBG2();
-  flowerBG3();
+  // flowerBG();
+  // flowerBG2();
+  // flowerBG3();
   
   for(let i = 0; i < girlNum; i++){
     girls[i].move();
@@ -123,7 +139,7 @@ function flowerBG2(){
   scale(0.47);
   noStroke();
   //stroke(0);
-  specularMaterial(150);
+  specularMaterial(100);
   model(flower);
   pop();
   
@@ -138,7 +154,7 @@ function flowerBG3(){
   scale(0.43);
   noStroke();
   //stroke(0);
-  specularMaterial(200);
+  specularMaterial(100);
   model(flower);
   pop();
   

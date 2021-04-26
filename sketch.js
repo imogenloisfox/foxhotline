@@ -10,6 +10,8 @@ let angle1 = 0;
 //models
 let girl;
 let flower;
+let f1;
+
 
 let seed = 100000;
 
@@ -18,6 +20,7 @@ let listOfColors = [];
 function preload(){
   girl = loadModel ('girl.obj');
   flower = loadModel ('flower.obj');
+  f1 = loadModel('f1.obj');
 }
 
 function setup() {
@@ -48,24 +51,9 @@ function draw(){
   directionalLight(90,255,180, 0.15, 0.15, 0);
   pointLight(255,103,151, locX, locY, 100);
 
-  push();
-  translate(-200, -200);
-  noStroke();
-  beginShape();
-  fill(255,0,0);
-  vertex(50,50);
-  fill(0,255,0);
-  vertex(300,50);
-  fill(0,255,255);
-  vertex(300,300);
-  fill(0,0,250);
-  vertex(50,300);
-  endShape(CLOSE);
-  pop();
-  
-  // flowerBG();
-  // flowerBG2();
-  // flowerBG3();
+  flowerBG();
+  flowerBG2();
+  flowerBG3();
   
   for(let i = 0; i < girlNum; i++){
     girls[i].move();
@@ -82,7 +70,7 @@ class movingGirls{
     this.valx = random(300);
     this.valy = random(200);
     this.valz = random(100);
-    this.size = random(0.05, 0.5);
+    this.size = random(0.01, 0.3);
     this.c = (listOfColors[int(random(0, listOfColors.length))]);
   }
   
@@ -99,14 +87,14 @@ class movingGirls{
   
   display(){
     push();
-    translate(this.x - width*0.45, this.y - height*0.27, this.z - this.zRange/2);
+    translate(this.x - width*0.45, this.y - height*0.3, this.z - this.zRange/2);
     angleRotate += 0.1;
     rotateX(180);
     rotateY(angleRotate);
     //rotateZ(angleRotate);
     noFill();
-    stroke(this.c);
-    strokeWeight(random(0.05, 0.4));
+    stroke(0);
+    strokeWeight(random(0.03, 0.25));
     scale(this.size);
     model(girl);
     pop();
@@ -117,45 +105,45 @@ class movingGirls{
 
 function flowerBG(){
   push();
-  translate(350, height*0.3, 0);
+  translate(350, height*0.15, 0);
   angle1 += 0.2;
   rotateX(160);
   rotateY(angle1);
-  scale(0.42);
+  scale(1.7);
   noStroke();
   //stroke(0);
   specularMaterial(100);
-  model(flower);
+  model(f1);
   pop();
   
 }
 
 function flowerBG2(){
   push();
-  translate(-400, height*0.3, -100);
+  translate(-400, height*0.15, -100);
   angle1 += 0.2;
   rotateX(165);
   rotateY(-angle1);
-  scale(0.47);
+  scale(1.7);
   noStroke();
   //stroke(0);
   specularMaterial(100);
-  model(flower);
+  model(f1);
   pop();
   
 }
 
 function flowerBG3(){
   push();
-  translate(0, height*0.4, -100);
+  translate(0, height*0.15, -100);
   angle1 += 0.2;
   rotateX(150);
   rotateY(-angle1);
-  scale(0.43);
+  scale(2);
   noStroke();
   //stroke(0);
   specularMaterial(100);
-  model(flower);
+  model(f1);
   pop();
   
 }

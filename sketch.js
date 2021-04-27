@@ -1,6 +1,6 @@
 //girls
 let girls = [];
-let girlNum = 40;
+let girlNum = 50;
 
 //angle
 let angle = 0;
@@ -12,10 +12,10 @@ let girl;
 let flower;
 let f1;
 
-
 let seed = 100000;
 
 let listOfColors = [];
+let bgIndex = 0;
 
 function preload(){
   girl = loadModel ('girl.obj');
@@ -59,11 +59,20 @@ function draw(){
   flowerBG5();
   flowerBG6();
   flowerBG7();
+  colorchange();
   
   for(let i = 0; i < girlNum; i++){
     girls[i].move();
     girls[i].display();
   }
+}
+
+function colorchange(){
+  if(mouseIsPressed == true){
+    let randomValue = listOfColors[Math.floor(Math.random() * listOfColors.length)];
+    bgIndex = floor(random(listOfColors.length));
+    listOfColors.push(randomValue);
+  } 
 }
 
 class movingGirls{
@@ -72,9 +81,9 @@ class movingGirls{
     this.y = random(height);
     this.zRange = random(height);
     this.z = random(this.zRange);
-    this.valx = random(240);
-    this.valy = random(240);
-    this.valz = random(240);
+    this.valx = random(250);
+    this.valy = random(250);
+    this.valz = random(250);
     this.size = random(0.5, 15);
     this.c = (listOfColors[int(random(0, listOfColors.length))]);
   }

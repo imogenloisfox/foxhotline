@@ -99,11 +99,11 @@ class movingGirls{
     //rotateZ(angleRotate);
     fill(this.c);
     stroke(this.c);
-    strokeWeight(random(0.5,2));
+    strokeWeight(random(0.5,1.7));
     sphere(this.size/2);
     let box_x = this.size*2+random(5, 10);
     let box_y = (random(1,5));
-    let box_z = (random(5,10));
+    let box_z = (random(5,15));
     let petal = (random(2, 8));
     let angle = 360 / petal;
     for(let i =0; i<petal; i++){

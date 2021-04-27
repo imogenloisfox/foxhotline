@@ -55,7 +55,7 @@ function setup() {
   a.style('transition', 'background-color', '2s');
   a.style('padding', '10px', '80px');
   
-  a.style('hover', 'background-color', '#fd02a4', 'color', '#fd02a4');
+  a.style('hover', 'background-color', '#fd02a4', 'color', '#fd02a4'); 
 }
 
 function draw(){

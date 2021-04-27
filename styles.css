@@ -14,13 +14,13 @@
   z-index:-9999;
 }
 
-/* a {
+a {
   text-decoration: inherit;
-} */
+}
 
 .btn{
   color: white;
-  font-family: "comic sans"; 
+  font-family: "arial"; 
   text-align: center;
   width: 100px;
   height: 50px;

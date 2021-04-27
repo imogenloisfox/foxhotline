@@ -25,7 +25,7 @@ function preload(){
 
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-  canvas.parent('p5Canvas');
+  canvas.parent("p5Canvas");
  
   angleMode(DEGREES);
 

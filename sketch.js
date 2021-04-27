@@ -1,6 +1,6 @@
 //girls
 let girls = [];
-let girlNum = 30;
+let girlNum = 40;
 
 //angle
 let angle = 0;

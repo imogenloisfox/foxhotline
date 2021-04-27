@@ -1,6 +1,6 @@
 //girls
 let girls = [];
-let girlNum = 20;
+let girlNum = 40;
 
 //angle
 let angle = 0;
@@ -31,7 +31,7 @@ function setup() {
 
   //color
    //colorMode(HSB);
-   listOfColors = [color('#b9e898'), color('#fe633c'), color('#c6f0f5'), color('#ff2e4c'), color('#14F4FF'), color('#26a7e1#'), color('#f58ed3'), color('#e9ec02'), color('#f6f6fb')];
+   listOfColors = [color('#d4efb0'), color('#f58ed3'), color('#c6f0f5'), color('#f6f6fb'), color('#a6fdb5'), color('#87d4dc'), color('#b201b8'), color('#d4efb0'), color('#fd02a4')];
   
 
  //girls
@@ -99,11 +99,11 @@ class movingGirls{
     //rotateZ(angleRotate);
     fill(this.c);
     stroke(this.c);
-    strokeWeight(random(0.5,2));
+    strokeWeight(random(0.5,1.7));
     sphere(this.size/2);
     let box_x = this.size*2+random(5, 10);
     let box_y = (random(1,5));
-    let box_z = (random(5,10));
+    let box_z = (random(5,15));
     let petal = (random(2, 8));
     let angle = 360 / petal;
     for(let i =0; i<petal; i++){
@@ -181,11 +181,11 @@ function flowerBG4(){
 
 function flowerBG5(){
   push();
-  translate(900, -300, -1600);
+  translate(1050, -250, -1600);
   angle1 += 0.2;
   rotateX(155);
   rotateY(-angle1*0.3);
-  scale(4.4);
+  scale(5.2);
   noStroke();
   //noFill()
   //stroke(252,195,224);

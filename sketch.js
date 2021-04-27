@@ -67,13 +67,6 @@ function draw(){
   }
 }
 
-function colorchange(){
-  if(mouseIsPressed == true){
-    let randomValue = listOfColors[Math.floor(Math.random() * listOfColors.length)];
-    bgIndex = floor(random(listOfColors.length));
-    listOfColors.push(randomValue);
-  } 
-}
 
 class movingGirls{
   constructor(){
@@ -122,6 +115,14 @@ class movingGirls{
     
     pop();
 }
+}
+
+function colorchange(){
+  if(mouseIsPressed == true){
+    let randomValue = listOfColors[Math.floor(Math.random() * listOfColors.length)];
+    bgIndex = floor(random(listOfColors.length));
+    listOfColors.push(randomValue);
+  } 
 }
 
 function flowerBG(){

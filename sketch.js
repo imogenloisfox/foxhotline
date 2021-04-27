@@ -31,7 +31,7 @@ function setup() {
 
   //color
    //colorMode(HSB);
-   listOfColors = [color('#b9e898'), color('#fe633c'), color('#c6f0f5'), color('#ff2e4c'), color('#14F4FF'), color('#26a7e1#'), color('#f58ed3'), color('#e9ec02'), color('#f6f6fb')];
+   listOfColors = [color('#d4efb0'), color('#f58ed3'), color('#c6f0f5'), color('#f6f6fb'), color('#a6fdb5'), color('#87d4dc'), color('#b201b8'), color('#d4efb0'), color('#fd02a4')];
   
 
  //girls

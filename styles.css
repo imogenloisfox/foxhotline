@@ -2,25 +2,3 @@ body {
   margin-top: 300px;
   text-align: center;
 }
-
-a {
-  text-decoration: inherit;
-}
-
-.btn{
-  color: white;
-  font-family: "proxima nova";
-  text-align: center;
-  width: 100px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #fd02a4;
-  border: 2px solid #fd02a4;
-  transition: background-color 2s;
-  padding: 10px 80px;
-}
-
-.btn:hover {
-  background-color: white;
-  color: #fd02a4;
-}

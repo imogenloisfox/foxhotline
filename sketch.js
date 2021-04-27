@@ -43,6 +43,7 @@ function setup() {
 function draw(){
   background(255);
   randomSeed(seed);
+  orbitControl(0.2, 0.2, 0.01);
 
   let locX = mouseX - height / 2;
   let locY = mouseY - width / 2;
@@ -54,6 +55,10 @@ function draw(){
   flowerBG();
   flowerBG2();
   flowerBG3();
+  flowerBG4();
+  flowerBG5();
+  flowerBG6();
+  flowerBG7();
   
   for(let i = 0; i < girlNum; i++){
     girls[i].move();
@@ -65,68 +70,60 @@ class movingGirls{
   constructor(){
     this.x = random(width);
     this.y = random(height);
-    this.zRange = height;
+    this.zRange = random(height);
     this.z = random(this.zRange);
-    this.valx = random(300);
-    this.valy = random(200);
-    this.valz = random(100);
-    this.size = random(0.01, 0.3);
+    this.valx = random(240);
+    this.valy = random(240);
+    this.valz = random(240);
+    this.size = random(0.5, 15);
     this.c = (listOfColors[int(random(0, listOfColors.length))]);
   }
   
   move(){
     //noise is to return a number from 0-1
-    this.valx += 0.005;
-    this.valy += 0.015;
-    this.valz += 0.005;
+    this.valx += 0.003;
+    this.valy += 0.002;
+    this.valz += 0.002;
     
     this.x = noise(this.valx)*width;
     this.y = noise(this.valy)*height;
-    this.z = noise(this.valz)*this.zRange;
+    this.z = noise(this.valz)*height;
   }
   
   display(){
     push();
-    translate(this.x - width*0.45, this.y - height*0.3, this.z - this.zRange/2);
+    translate(this.x-width/2, this.y-height/2,this.z-this.zRange/2);
     angleRotate += 0.1;
     rotateX(180);
     rotateY(angleRotate);
     //rotateZ(angleRotate);
-    noFill();
-    stroke(0);
-    strokeWeight(random(0.03, 0.25));
-    scale(this.size);
-    model(girl);
+    fill(this.c);
+    stroke(this.c);
+    strokeWeight(random(0.5,2));
+    sphere(this.size/2);
+    let box_x = this.size*2+random(5, 10);
+    let box_y = (random(1,5));
+    let box_z = (random(5,10));
+    let petal = (random(2, 8));
+    let angle = 360 / petal;
+    for(let i =0; i<petal; i++){
+      rotate(angle);
+      box(box_x, box_y, box_z);
+    }
+    
     pop();
-  }
 }
-
-
+}
 
 function flowerBG(){
   push();
-  translate(350, height*0.15, 0);
-  angle1 += 0.2;
-  rotateX(160);
-  rotateY(angle1);
-  scale(1.7);
-  noStroke();
-  //stroke(0);
-  specularMaterial(100);
-  model(f1);
-  pop();
-  
-}
-
-function flowerBG2(){
-  push();
-  translate(-400, height*0.15, -100);
+  translate(800, height*0.01, -200);
   angle1 += 0.2;
   rotateX(165);
-  rotateY(-angle1);
-  scale(1.7);
+  rotateY(angle1*0.8);
+  scale(3.4);
   noStroke();
-  //stroke(0);
+ // stroke(255,103,151);
   specularMaterial(100);
   model(f1);
   pop();
@@ -135,14 +132,96 @@ function flowerBG2(){
 
 function flowerBG3(){
   push();
-  translate(0, height*0.15, -100);
+  translate(50, height*0.05, 0);
   angle1 += 0.2;
   rotateX(150);
-  rotateY(-angle1);
+  rotateY(-angle1*1.3);
   scale(2);
   noStroke();
-  //stroke(0);
+  //stroke(255,125,214);
   specularMaterial(100);
+  model(f1);
+  pop();
+  
+}
+
+function flowerBG2(){
+  push();
+  translate(-1000, -200, -600);
+  angle1 += 0.2;
+  rotateX(175);
+  rotateY(-angle1);
+  scale(3.7);
+  noStroke();
+  //noFill()
+  //stroke(252,195,224);
+  //strokeWeight(0.3)
+  specularMaterial(100);
+  model(f1);
+  pop();
+  
+}
+
+function flowerBG4(){
+  push();
+  translate(-1000, height*0.01, -1500);
+  angle1 += 0.2;
+  rotateX(150);
+  rotateY(angle1*0.3);
+  scale(4.3);
+  noStroke();
+  //noFill()
+  //stroke(252,195,224);
+  //strokeWeight(0.3)
+  specularMaterial(110);
+  model(f1);
+  pop();
+  
+}
+
+function flowerBG5(){
+  push();
+  translate(900, -300, -1600);
+  angle1 += 0.2;
+  rotateX(155);
+  rotateY(-angle1*0.3);
+  scale(4.4);
+  noStroke();
+  //noFill()
+  //stroke(252,195,224);
+  //strokeWeight(0.3)
+  specularMaterial(120);
+  model(f1);
+  pop();
+  
+}
+function flowerBG6(){
+  push();
+  translate(-600, -400, -1600);
+  angle1 += 0.2;
+  rotateX(145);
+  rotateY(angle1*2);
+  scale(3.4);
+  noStroke();
+  //noFill()
+  //stroke(252,195,224);
+  //strokeWeight(0.3)
+  specularMaterial(120);
+  model(f1);
+  pop();
+  
+}
+
+function flowerBG7(){
+  push();
+  translate(50, -450, -800);
+  angle1 += 0.2;
+  rotateX(150);
+  rotateY(angle1*1.2);
+  scale(4.5);
+  noStroke();
+  //stroke(255,125,214);
+  specularMaterial(110);
   model(f1);
   pop();
   

@@ -79,19 +79,11 @@ body {
 }
 
 .btn:hover .inner {
-
   left: 0;
-
-
 }
 
 .btn1 .inner{
-  
   background: -webkit-linear-gradient(right,#fd02a4,#a6fdb5,#c6f0f5,#fd02a4,#a6fdb5,#c6f0f5);
   
 }
-/* .btn:hover {
-  background-color: white;
-  color: #fd02a4;
-} */
 

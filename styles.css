@@ -1,7 +1,28 @@
-/* body {
-  margin-top: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+  justify-content: center;
+  top: 96%;
+  left: 50%;
+  display: flex;
+  align-items: center;
   text-align: center;
-} */
+  background: linear-gradient( 180deg, #fd02a4, #a6fdb5, #c6f0f5)
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 #p5Canvas {
   
@@ -11,27 +32,58 @@
   height:100%;
   display: block;
   position: fixed;
-  z-index:-9999;
+  z-index:-999;
 }
 
-/* a {
-  text-decoration: inherit;
-} */
-
 .btn{
+  
+  position: relative;
+  display: inline-flex;
+  height: 40px;
+  width: 140px;
+  /* border-radius: 50%; */
+  margin: 17px 20px;
+  overflow: hidden;
+  transition: all .4s;
+}
+
+.btn .inner {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  left: -100%;
+  z-index: 2;
+  transition: all .4s;
+
+}
+
+.btn button{
+  position:relative;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  border: none;
+  outline: none;
+  background: none;
   color: white;
-  font-family: "comic sans"; 
-  text-align: center;
-  width: 100px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #fd02a4;
-  border: 2px solid #fd02a4;
-  transition: background-color 2s;
-  padding: 10px 80px;
+  font-size: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 .btn:hover {
-  background-color: white;
-  color: #fd02a4;
+  transform: scale(1.03);
 }
+
+.btn:hover .inner {
+  left: 0;
+}
+
+.btn1 .inner{
+  background: -webkit-linear-gradient(right,#fd02a4,#a6fdb5,#c6f0f5,#fd02a4,#a6fdb5,#c6f0f5);
+  
+}
+

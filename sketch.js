@@ -25,7 +25,7 @@ function preload(){
 
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-  canvas.parent('p5Canvas');
+  canvas.parent("p5Canvas");
  
   angleMode(DEGREES);
 
@@ -38,24 +38,6 @@ function setup() {
  for(let i = 0; i < girlNum; i++){
   girls.push(new movingGirls());
 }
-
-
-  // //button
-  // let a = createA('http://foxhotline.co.uk', 'WEBSITE');
-  // a.position(width/2, 0, 0);
-  
-  // a.style('color', '#fd02a4');
-  // a.style('font-family', 'arial');
-  // a.style('text-align', 'center');
-  // a.style('width', '100px');
-  // a.style('height', '20px');
-  // a.style('border-radius', '50%');
-  // a.style('background-color', 'white');
-  // a.style('border', '2px', '#fd02a4');
-  // a.style('transition', 'background-color', '2s');
-  // a.style('padding', '10px', '80px');
-  
-  // a.style('hover', 'background-color', '#fd02a4', 'color', '#fd02a4'); 
 }
 
 function draw(){

@@ -17,6 +17,8 @@ let seed = 100000;
 let listOfColors = [];
 let bgIndex = 0;
 
+var canvas;
+
 function preload(){
   girl = loadModel ('girl.obj');
   flower = loadModel ('flower.obj');
@@ -24,7 +26,8 @@ function preload(){
 }
 
 function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  
   canvas.parent("p5Canvas");
  
   angleMode(DEGREES);
@@ -60,12 +63,15 @@ function draw(){
   flowerBG6();
   flowerBG7();
   colorchange();
+
   
   for(let i = 0; i < girlNum; i++){
     girls[i].move();
     girls[i].display();
   }
 }
+
+
 
 
 class movingGirls{

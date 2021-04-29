@@ -15,15 +15,67 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
   <script src="sketch.js"></script>
 <body>
-  <div class="center">
+  <!-- <div class="center">
     <div class ="btn btn1">
       <div class ="inner">
        <a href="https://foxhotline.co.uk"><button>💌</button></a>
 
       </div>
     </div>
-  </div>
+  </div> -->
   <div id="p5Canvas"></div>
+
+  <button id="myBtn">
+   <span class="innerButton">
+     💌
+   </span>
+  </button> 
+ 
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+
+      <span class="close"></span>
+    </div>
+  
+    <div class="text">
+      <p>IMOGEN FOX IS A LONDON BASED<br>DESIGNER AIMING TO PUSH THE<br>BOUNDARIES OF THE DIGITAL<br>FUTURE.</p>
+      </div>
+      <div class="links">
+       <h1><a class="websitelink" href="https://foxhotline.co.uk" target="blank">WEBSITE</a></h1> 
+       <h1><a class="instalink" href="https://www.instagram.com/foxhotline/" target="blank">INSTAGRAM</a></h1> 
+       <h1><a class="emaillink" href="mailto:imogenfox1998@live.co.uk" target="blank">EMAIL</a></h1> 
+      </div>
+    </div>
+    
+  
+
+ 
+  
+
+  
+
+  <script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+  </script>
 
 </script>
   

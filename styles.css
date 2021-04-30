@@ -82,20 +82,27 @@ a:hover {
   color: #fd02a4;
 }
 
-.links {
+.link1 {
   position: absolute;
   left: 35%;
   top: 58%;
   display: inline;
 }
 
-.links .instalink {
-  padding-left: 167px;
+.link2 {
+  position: absolute;
+  left: 48%;
+  top: 58%;
+  display: inline;
 }
 
-.links .emaillink {
-  padding-left: 345px;
+.link3 {
+  position: absolute;
+  left: 62%;
+  top: 58%;
+  display: inline;
 }
+
 
 h1{
   position: absolute;

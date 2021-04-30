@@ -71,6 +71,7 @@ body {
 .text {
   text-align:left;
   position: absolute;
+  display: inline;
   left: 35%;
   top: 40%;
   font-family: 'Roboto', sans-serif;

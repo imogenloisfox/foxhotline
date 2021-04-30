@@ -158,21 +158,33 @@ h1{
 
 marquee {
   position: absolute;
-  top: 430%;
+  top: 436%;
+  left: 0px;
   display: block;
-  color: #a6fdb5;
-  width: 3000px;
+  color: white;
+  width: 1300px;
   height: 90px;
+  overflow: hidden;
   /* box-shadow: 0 0 10px 0 #00000066; */
   
 }
 
 .ticker-left li {
   display: inline-block;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 90px;
   min-width: 50%;
-  text-shadow: 0 0 5px #a6fdb5;
-
+  text-shadow: 0 0 5px white;
+  z-index: 3;
 }
 
+#rectangle {
+  position: absolute;
+  top: 450%;
+  left: 0px;
+  width: 1300px;
+  height: 70px;
+  background: #fd02a4;
+  z-index: -1;
+  box-shadow: 0 0 10px 0 #00000066;
+}

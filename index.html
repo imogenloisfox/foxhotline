@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>💌</title>
   <meta name="title" content="Imogen Fox"/>
     <meta
@@ -16,15 +16,10 @@
   <script src="sketch.js"></script>
 <body>
   
-  <div id="p5Canvas"></div>
-
-  <marquee behavior="scroll" direction="left" loop="infinite" scrollamount="10" onmouseover="this.stop();" onmouseout="this.start();">
-    <ul class="ticker-left">
-      <h3><a href="https://foxhotline.co.uk">WEBSITE</a>
-      <a href="https://www.instagram.com/foxhotline/">INSTAGRAM</a>
-      <a href="mailto:imogenfox1998@live.co.uk">EMAIL</a></h3>
-    </ul>
-  </marquee>
+  <div class="container-fluid">
+    
+  
+  <center><div id="p5Canvas"></div></center>
   
   
 
@@ -51,7 +46,17 @@
     </div>
   </div>
 
-    <div id="rectangle"></div>
+  <div id="footer">
+   <center><div id="rectangle"></div></center> 
+  </div>
+  <marquee behavior="scroll" direction="left" loop="infinite" scrollamount="10" onmouseover="this.stop();" onmouseout="this.start();">
+    <ul class="ticker-left">
+      <h3><a href="https://foxhotline.co.uk">WEBSITE</a>
+      <a href="https://www.instagram.com/foxhotline/">INSTAGRAM</a>
+      <a href="mailto:imogenfox1998@live.co.uk">EMAIL</a></h3>
+    </ul>
+  </marquee>
+    
 
    
 
@@ -85,7 +90,7 @@ window.onclick = function(event) {
 
 </script>
 
-
+</div>
   
 </body>
 </html>  

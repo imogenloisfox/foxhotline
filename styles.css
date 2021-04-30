@@ -105,7 +105,6 @@ a:hover {
 
 
 h1{
-  position: absolute;
   text-align:center;
   display: inline;
   font-family: 'Roboto', sans-serif;
@@ -157,6 +156,23 @@ h1{
   to {top:0; opacity:1}
 }
 
+marquee {
+  position: absolute;
+  top: 430%;
+  display: block;
+  color: #a6fdb5;
+  width: 3000px;
+  height: 90px;
+  /* box-shadow: 0 0 10px 0 #00000066; */
+  
+}
 
+.ticker-left li {
+  display: inline-block;
+  font-size: 40px;
+  line-height: 90px;
+  min-width: 50%;
+  text-shadow: 0 0 5px #a6fdb5;
 
+}
 

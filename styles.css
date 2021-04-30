@@ -83,7 +83,7 @@ a:hover {
 }
 
 .links {
-  position: fixed;
+  position: absolute;
   left: 35%;
   top: 58%;
   display: inline;

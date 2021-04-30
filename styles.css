@@ -161,7 +161,7 @@ marquee {
   top: 436%;
   left: 0px;
   display: block;
-  color: white;
+  color: #fd02a4;
   width: 1300px;
   height: 90px;
   overflow: hidden;
@@ -174,7 +174,7 @@ marquee {
   font-size: 30px;
   line-height: 90px;
   min-width: 50%;
-  text-shadow: 0 0 5px white;
+  /* text-shadow: 0 0 5px white; */
   z-index: 3;
 }
 
@@ -184,7 +184,9 @@ marquee {
   left: 0px;
   width: 1300px;
   height: 70px;
-  background: #fd02a4;
+  background: white;
   z-index: -1;
-  box-shadow: 0 0 10px 0 #00000066;
+  /* box-shadow: 0 0 10px 0 #00000066; */
+  /* opacity: 0.5; */
+  
 }

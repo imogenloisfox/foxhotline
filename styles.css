@@ -46,7 +46,8 @@ body {
   margin: 22px 30px;
   overflow: hidden;
   transition: all .4s;
-  background: -webkit-linear-gradient(#fd02a4,#a6fdb5,#c6f0f5);
+  /* background: -webkit-linear-gradient(#fd02a4,#a6fdb5,#c6f0f5); */
+  background: white;
   box-shadow: 0 0 10px 0 #00000066;
   cursor: pointer;
   z-index:5;
@@ -60,9 +61,9 @@ body {
 
 .text {
   text-align:left;
-  position: absolute;
+  position: fixed;
   left: 35%;
-  top: 38%;
+  top: 35%;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: black;
@@ -82,28 +83,6 @@ a:hover {
   color: #fd02a4;
 }
 
-.link1 {
-  position: absolute;
-  left: 35%;
-  top: 58%;
-  display: inline;
-}
-
-.link2 {
-  position: absolute;
-  left: 48%;
-  top: 58%;
-  display: inline;
-}
-
-.link3 {
-  position: absolute;
-  left: 62%;
-  top: 58%;
-  display: inline;
-}
-
-
 h1{
   text-align:center;
   display: inline;
@@ -111,6 +90,40 @@ h1{
   letter-spacing:0.3vh;
   
 }
+
+.links h1{
+  position: fixed;
+  float: left;
+  display: inline;
+  left: 42%;
+  top: 54%;
+  padding: 0px 80px;
+}
+
+/* .link1 {
+  position: absolute;
+  left: 35%;
+  top: 58%;
+  float: left;
+  display: inline;
+}
+
+.link2 {
+  position: absolute;
+  left: 48%;
+  top: 58%;
+  float: left;
+  display: inline;
+}
+
+.link3 {
+  position: absolute;
+  left: 62%;
+  top: 58%;
+  float: left;
+  display: inline;
+} */
+
 
 /* The Modal (background) */
 .modal {
@@ -135,9 +148,10 @@ h1{
   margin: auto;
   padding: 20px;
   border-radius: 20px;
-  width: 500px;;
-  height: 300px;
-  filter: blur(8px);
+  width: 470px;;
+  height: 270px;
+  opacity: 0.95;
+  box-shadow: 0px 0px 25px 25px white;
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.5s;
   animation-name: animatetop;
@@ -165,21 +179,24 @@ marquee {
   width: 1300px;
   height: 90px;
   overflow: hidden;
-  
+  z-index: 2;
   /* box-shadow: 0 0 10px 0 #00000066; */
   
 }
 
 .ticker-left h3 a {
   display: absolute;
-  font-size: 30px;
+  font-size: 15px;
   line-height: 90px;
   min-width: 20px;
   /* text-shadow: 0 0 5px white; */
   z-index: 3;
   float: left;
   padding-left: 250px;
-  color: #a6fdb5;
+  color: black;
+  z-index: 2;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing:0.3vh;
 }
 
 h3 a:hover {
@@ -193,8 +210,9 @@ h3 a:hover {
   width: 1300px;
   height: 70px;
   background: white;
-  z-index: -1;
+  z-index: 1;
   /* box-shadow: 0 0 10px 0 #00000066; */
   /* opacity: 0.5; */
   
 }
+

@@ -178,8 +178,12 @@ marquee {
   /* text-shadow: 0 0 5px white; */
   z-index: 3;
   float: left;
-  padding-left: 200px;
-  
+  padding-left: 250px;
+  color: #a6fdb5;
+}
+
+h3 a:hover {
+  color: #fd02a4;
 }
 
 #rectangle {

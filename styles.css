@@ -216,7 +216,7 @@ marquee {
 .ticker-left h3 a {
   display: absolute;
   font-size: 15px;
-  line-height: 93px;
+  line-height: 100px;
   min-width: 20px;
   /* text-shadow: 0 0 5px white; */
   z-index: 3;

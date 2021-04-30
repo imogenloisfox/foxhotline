@@ -61,7 +61,7 @@ body {
 
 .text {
   text-align:left;
-  position: fixed;
+  position: absolute;
   left: 35%;
   top: 35%;
   font-family: 'Roboto', sans-serif;
@@ -72,10 +72,13 @@ body {
   
 }
 a{
+  position: relative;
   font-size: 10px;
   color: black;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+  float: left;
+  padding-left: 34px;
   
 }
 
@@ -92,12 +95,12 @@ h1{
 }
 
 .links h1{
-  position: fixed;
+  position: absolute;
   float: left;
   display: inline;
   left: 42%;
   top: 54%;
-  padding: 0px 80px;
+  
 }
 
 /* .link1 {
@@ -159,6 +162,21 @@ h1{
   
 }
 
+/* The Close Button */
+.close {
+  color: rgb(0, 0, 0);
+  float: right;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fd02a4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0} 
@@ -187,7 +205,7 @@ marquee {
 .ticker-left h3 a {
   display: absolute;
   font-size: 15px;
-  line-height: 90px;
+  line-height: 93px;
   min-width: 20px;
   /* text-shadow: 0 0 5px white; */
   z-index: 3;
@@ -208,7 +226,7 @@ h3 a:hover {
   top: 450%;
   left: 0px;
   width: 1300px;
-  height: 70px;
+  height: 50px;
   background: white;
   z-index: 1;
   /* box-shadow: 0 0 10px 0 #00000066; */

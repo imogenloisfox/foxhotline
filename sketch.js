@@ -18,8 +18,6 @@ let listOfColors = [];
 let bgIndex = 0;
 
 var canvas;
-var w = window.innerWidth;
-var h = window.innerHeight;
 
 function preload(){
   girl = loadModel ('girl.obj');
@@ -28,7 +26,7 @@ function preload(){
 }
 
 function setup() {
-  canvas = createCanvas(w, h, WEBGL);
+  canvas = createCanvas(windowWidth, windowHeight, WEBGL);
   
   canvas.parent("p5Canvas");
  
@@ -49,12 +47,6 @@ function draw(){
   background(255);
   randomSeed(seed);
   orbitControl(0.2, 0.2, 0.01);
-
-  window.onresize = function(){
-    w = window.innerWidth;
-    h = window.innerHeight;
-    canvas.size(w,h);
-  }
 
   let locX = mouseX - height / 2;
   let locY = mouseY - width / 2;
@@ -252,5 +244,5 @@ function flowerBG7(){
 }
 
 function windowResized(){
-  resizeCanvas(w, h);
+  resizeCanvas(windowWidth, windowHeight);
 }

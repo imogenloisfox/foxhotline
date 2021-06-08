@@ -68,38 +68,6 @@ body {
   transform: scale(1.03);
 }
 
-.text {
-  text-align:left;
-  position: absolute;
-  display: inline;
-  
-  left: 35%;
-  top: 39%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  color: black;
-  z-index: 2;
-  letter-spacing:0.3vh;
-  
-}
-
-.text2 {
-  text-align: left;
-  position: absolute;
-  display: inline;
-  left: 41%;
-  top: 48%;
-
-  
-}
-
-.text2 a {
-  font-size: 33px;
-}
-
-
-
-
 
 a{
   position: relative;
@@ -142,8 +110,28 @@ h1{
   background-color: rgb(255, 255, 255); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4) ; /* Black w/ opacity */
   
-
 }
+
+.modal p {
+  position: fixed;
+  display: inline;
+  left: 30%;
+  top: 39%;
+  text-align:left;
+  letter-spacing:0.3vh;
+  font-size: 20px;
+  
+}
+
+.modal a {
+  padding-top: 63px;
+  padding-left: 110px;
+  position: fixed;
+  display: inline;
+  font-size: 30px;
+  
+}
+
 
 /* Modal Content */
 .modal-content {
@@ -160,6 +148,7 @@ h1{
   animation-name: animatetop;
   animation-duration: 0.5s
   
+
 }
 
 /* The Close Button */
@@ -168,6 +157,7 @@ h1{
   float: right;
   font-size: 15px;
   font-weight: bold;
+  
 }
 
 .close:hover,

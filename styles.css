@@ -32,7 +32,7 @@ body {
   font-family: 'Roboto', sans-serif;
   align-items: center;
   text-align: center;
-  background: linear-gradient( 180deg, #fd02a4, #a6fdb5, #c6f0f5);
+  background: linear-gradient(180deg, #ffffff, #a6fdb5, #c6f0f5);
   display: flex;
 }
 
@@ -72,8 +72,9 @@ body {
   text-align:left;
   position: absolute;
   display: inline;
-  left: 35%;
-  top: 40%;
+  
+  left: 34%;
+  top: 39%;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: black;
@@ -81,6 +82,8 @@ body {
   letter-spacing:0.3vh;
   
 }
+
+
 a{
   position: relative;
   font-size: 10px;
@@ -94,7 +97,8 @@ a{
 }
 
 a:hover {
-  color: #fd02a4;
+  color: transparent;
+  text-shadow: 0 0 2px #353535;
 }
 
 h1{
@@ -105,39 +109,6 @@ h1{
   
 }
 
-.links h1{
-  position: relative;
-  float: left;
-  display: inline;
-  right: 5px;
-  top: 3px;
-  z-index: 5;
-  
-}
-
-/* .link1 {
-  position: absolute;
-  left: 35%;
-  top: 58%;
-  float: left;
-  display: inline;
-}
-
-.link2 {
-  position: absolute;
-  left: 48%;
-  top: 58%;
-  float: left;
-  display: inline;
-}
-
-.link3 {
-  position: absolute;
-  left: 62%;
-  top: 58%;
-  float: left;
-  display: inline;
-} */
 
 
 /* The Modal (background) */
@@ -184,7 +155,7 @@ h1{
 
 .close:hover,
 .close:focus {
-  color: #fd02a4;
+  color: #353535;
   text-decoration: none;
   cursor: pointer;
 }
@@ -205,7 +176,7 @@ marquee {
   top: 436%;
   left: 0px;
   display: block;
-  color: #fd02a4;
+  color: #353535;
   width: 1300px;
   height: 90px;
   overflow: hidden;
@@ -230,17 +201,17 @@ marquee {
 }
 
 h3 a:hover {
-  color: #fd02a4;
+  color: transparent;
 }
 
-#footer {
+.footer {
   min-height: 100px;
   margin-top: 3%;
   position: absolute;
   top: 450%;
   left: 0px;
   width: 1300px;
-  height: 50px;
+  height: 60px;
   background: white;
   
   /* box-shadow: 0 0 10px 0 #00000066; */

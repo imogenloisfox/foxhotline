@@ -83,6 +83,23 @@ body {
   
 }
 
+.text2 {
+  text-align: left;
+  position: absolute;
+  display: inline;
+  left: 41%;
+  top: 48%;
+
+  
+}
+
+.text2 a {
+  font-size: 33px;
+}
+
+
+
+
 
 a{
   position: relative;
